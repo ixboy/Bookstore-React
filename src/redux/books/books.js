@@ -3,11 +3,11 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [];
 
-export const addBook = payload => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK, payload,
 });
 
-export const removeBook = payload => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK, payload,
 });
 
@@ -22,4 +22,4 @@ const booksReducer = (state = initialState, action) => {
   }
 };
 
-export default booksReducer; 
+export default booksReducer;
