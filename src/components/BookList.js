@@ -1,15 +1,17 @@
 import React from 'react';
 
 const BookList = () => (
-  <div className="d-flex flex-row justify-content-center">
+  <div className="d-flex flex-row justify-content-center border">
     <div className="d-flex flex-column px-3">
-      <h3>Lorem</h3>
-      <h1>Lorem Ipsun</h1>
-      <span>Subtittle</span>
+      <h3>Programming</h3>
+      <h1>React for Dummies</h1>
+      <span>Author&apos;s name</span>
       <div>
         <ul>
           <li>Comments</li>
-          <li>Remove</li>
+          <li>
+            <button type="button" className="btn btn-primary">Remove Book</button>
+          </li>
           <li>Edit</li>
         </ul>
       </div>

@@ -6,11 +6,11 @@ const Navbar = () => (
     <nav className="d-flex m-4 align-items-baseline">
       <Link to="/">
         {' '}
-        <h1 className="mx-4"> Bookstore CMS</h1>
+        <h1 className="mx-4"> Bookstore</h1>
       </Link>
       <Link to="/">
         {' '}
-        <p className="mx-4"> Books </p>
+        <p className="mx-4"> BOOKS </p>
       </Link>
       <Link to="/categories">
         {' '}
