@@ -4,12 +4,17 @@ import { useDispatch } from 'react-redux';
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
 
   const addTitle = (e) => {
     const title = e.target.value;
     setTitle(title);
   };
 
+  const addAuthor = (e) => {
+    const author = e.target.value;
+    setAuthor(author);
+  };
 
 
   return (
@@ -17,6 +22,7 @@ const AddBook = () => {
       <h2>ADD NEW BOOK</h2>
       <form>
         <input type="text" id="titleId" value={title} onChange={addTitle} placeholder="Book title" />
+        <input type="text" id="authorId" value={author} onChange={addAuthor} placeholder="Book Author" />
         <select type="select">
           <option value="test">Learning</option>
           <option value="test">Programing</option>
