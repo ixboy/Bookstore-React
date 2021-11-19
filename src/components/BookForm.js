@@ -5,45 +5,34 @@ import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [booktitle, setTitle] = useState('');
 
   const addTitle = (e) => {
-    const title = e.target.value;
-    setTitle(title);
-  };
-
-  const addAuthor = (e) => {
-    const author = e.target.value;
-    setAuthor(author);
+    const booktitle = e.target.value;
+    setTitle(booktitle);
   };
 
   const submitBookToStore = (e) => {
     e.preventDefault();
-    const newBook = {
-      id: uuidv4(),
-      title,
-      author,
-    };
+    const eventCategory = document.getElementById('category');
+    const bookcategory = eventCategory.options[eventCategory.selectedIndex].text;
+    const newBook = { title: booktitle, category: bookcategory, item_id: uuidv4() };
 
     // dispatch an action and pass it the newBook object (your action's payload)
     dispatch(addBook(newBook));
     setTitle('');
-    setAuthor('');
   };
 
   return (
     <div className="mx-auto m-4">
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={submitBookToStore}>
-        <input type="text" id="titleId" value={title} onChange={addTitle} placeholder="Book title" />
-        <input type="text" id="authorId" value={author} onChange={addAuthor} placeholder="Book Author" />
-        <select type="select">
-          <option value="test">Learning</option>
-          <option value="test">Programing</option>
-          <option value="test">Movies</option>
-          <option value="test">Novels</option>
-          <option value="test">Comic</option>
+        <input type="text" id="titleId" value={booktitle} onChange={addTitle} placeholder="Book title" />
+        <select type="select" id="category">
+          <option value="test_1">Learning</option>
+          <option value="test_2">Programing</option>
+          <option value="test_3">Movies</option>
+          <option value="test_4">Novels</option>
         </select>
         <button type="submit">Add Book</button>
       </form>
