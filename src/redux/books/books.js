@@ -25,6 +25,29 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+export const getBooks = () => async (dispatch) => {
+  const books = [];
+  let keys;
+  let values;
+  await fetch(API)
+    .then((response) => response.json())
+    .then((data) => {
+      [keys, values] = [Object.keys(data), Object.values(data)];
+    });
+  values.forEach((value, index) => {
+    const book = {
+      id: keys[index],
+      title: value[0].title,
+      category: value[0].category,
+    };
+    books.push(book);
+  });
+  dispatch({
+    type: GET_BOOKS,
+    payload: books,
+  });
+};
+
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -42,6 +65,8 @@ const booksReducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       deleteBook(action.payload);
       return state.filter((book) => book.id !== action.payload);
+    case GET_BOOKS:
+      return action.payload;
     default:
       return state;
   }
