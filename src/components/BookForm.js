@@ -17,8 +17,6 @@ const AddBook = () => {
     const eventCategory = document.getElementById('category');
     const bookcategory = eventCategory.options[eventCategory.selectedIndex].text;
     const newBook = { title: booktitle, category: bookcategory, item_id: uuidv4() };
-
-    // dispatch an action and pass it the newBook object (your action's payload)
     dispatch(addBook(newBook));
     setTitle('');
   };
