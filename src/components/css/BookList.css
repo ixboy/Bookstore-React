@@ -1,0 +1,20 @@
+
+.card-style {
+  min-width: 720px;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.author {
+  font-size: 0.83rem;
+}
+
+.remove {
+  background: none;
+  border: none;
+}
+
+.completed {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+}
