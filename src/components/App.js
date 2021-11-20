@@ -10,12 +10,14 @@ import Navbar from './Navbar';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
+      <div className="list">
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </div>
     </div>
   );
 }
