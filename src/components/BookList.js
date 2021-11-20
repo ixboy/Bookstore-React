@@ -1,9 +1,15 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBooks } from '../redux/books/books';
 import RemoveBook from './RemoveBook';
 
 const BookList = () => {
-  const bookStore = useSelector((state) => state.book);
+  const dispatch = useDispatch();
+  const bookStore = useSelector((store) => store.booksReducer);
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
 
   return (
     <>
@@ -39,7 +45,9 @@ const BookList = () => {
           </div>
         </div>
       ))}
+
     </>
+
   );
 };
 
