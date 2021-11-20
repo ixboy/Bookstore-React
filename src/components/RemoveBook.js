@@ -7,7 +7,7 @@ const RemoveBook = (book) => {
   const dispatch = useDispatch();
   const remove = () => dispatch(removeBook(id));
   return (
-    <button className="btn btn-primary" type="button" onClick={remove}> Remove</button>
+    <button className="remove text-primary fw-light p-0 mx-2" type="button" onClick={remove}> Remove</button>
   );
 };
 

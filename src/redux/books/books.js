@@ -39,7 +39,9 @@ export const getBooks = () => async (dispatch) => {
       id: keys[index],
       title: value[0].title,
       category: value[0].category,
+      author: value[0].author,
     };
+    console.log(book);
     books.push(book);
   });
   dispatch({
