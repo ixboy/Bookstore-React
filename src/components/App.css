@@ -10,6 +10,8 @@
 }
 
 body {
+  min-width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   margin: 0;
 }
@@ -23,7 +25,6 @@ body {
 
 .main-nav {
   font-family: 'Montserrat', sans-serif;
-  display: flex;
   height: 6rem;
   padding: 0 100px;
   margin-top: 1rem;
@@ -65,7 +66,7 @@ a:focus {
 .user-avatar {
   width: 32px;
   height: 32px;
-  margin: 20px 40px 0 auto;
+  margin: 1.5rem 6rem 0 auto;
   border-radius: 50%;
   border: 1px solid var(--white);
   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
@@ -90,6 +91,9 @@ li {
 }
 
 .book-card {
+  min-width: 90%;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
   display: flex;
   align-items: center;
   border-radius: 4px;
@@ -117,12 +121,32 @@ li {
   color: var(--black);
 }
 
+.remove {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 3.375rem;
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  cursor: pointer;
+}
+
 .links {
   margin: 1rem 1rem 0.125rem 0;
   font-family: 'Roboto Slab', serif;
   font-size: 0.875rem;
   font-weight: 300;
   color: var(--blue);
+  display: flex;
+  padding: 0;
 }
 
 .vl {
@@ -131,8 +155,39 @@ li {
 
 .completion {
   font-family: 'Montserrat', sans-serif;
-  flex: 0.6;
   color: var(--black);
+  display: flex;
+  flex-direction: row;
+}
+
+.Oval-2 {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  border-color: #0290ff #0290ff #0290ff #888;
+  margin-right: 2rem;
+}
+
+.line-2 {
+  height: 4.375rem;
+  margin: 1.125rem 3.688rem 0 4.938rem;
+  border: solid 1px #e8e8e8;
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
 .completion p {
@@ -140,11 +195,53 @@ li {
 }
 
 .progress {
-  flex: 0.6;
+  margin-right: 5rem;
 }
 
-.form-div {
-  border-top: 1px solid var(--white);
+.progress span {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 0;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+} 
+
+.progress .Current-Lesson {
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 0;
+  font-family: RobotoSlab;
+  font-size: 1.313rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.progress .Update-progress {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 1rem 0 0 0;
+  font-family: RobotoSlab;
+  letter-spacing: 0.5px;
+  color: #fff;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+}
+
+.Line {
+  min-width: 90%;
+  margin: 2.5rem 0.063rem 1.813rem 0;
+  border: solid 1px #e8e8e8;
 }
 
 .form-div .Text-Style-10 {
@@ -158,36 +255,44 @@ li {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.18px;
+  border-image-source: linear-gradient(to bottom, #307bbe, #379cf6);
   color: #888;
 }
 
 form {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
-input,
-select {
-  margin: 0 16px 0 0;
-  padding: 5px 15px;
-  border-radius: 4px;
-  border: solid 1px var(--white);
+form button {
+  min-width: 8.938rem;
+  max-height: 2.813rem;
+  margin: 1.188rem 0;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  background: #0290ff;
+  color: #fff;
 }
 
 input {
-  flex: 2;
+  min-width: 41.5rem;
+  max-height: 2.813rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px var(--white);
 }
 
-select {
-  flex: 0.8;
-}
-
-button {
-  width: 11.5rem;
+.select-b {
+  min-width: 17.813rem;
   height: 2.813rem;
-  border: 0;
-  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
-  border-radius: 3px;
-  color: var(--white);
-  background-color: var(--azure);
-  cursor: pointer;
+  margin: 1.188rem 0;
+  padding: 0;  
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
