@@ -4,16 +4,12 @@
 
 screenshot
 
-![](./src/images/Screenshot.png)
+![](./src/images/AppScreenshot.png)
 
-## 👷🏻 Built using
+## 👷🏻 Built with
     - React js
     - Redux
-    - VSCode
-    - GIT
-    - Github
-    - CSS
-    - Bootstrap
+    - CSS3
   
 <!-- ## 🌐 Live Preview
 
