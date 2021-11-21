@@ -11,43 +11,57 @@ const BookList = () => {
     dispatch(getBooks());
   }, [dispatch]);
 
+  const progress = 75;
+  const chapter = Math.round(Math.random() * (20 - 0) + 0);
+
   return (
     <>
       {bookStore.map((book) => (
-        <div key={book.id} className="d-flex flex-row justify-content-center border">
-          <div className="d-flex flex-column px-3">
-            <h3>Category</h3>
-            <h1>
+        <div key={book.id} className="book-card">
+          <div className="content">
+            <h5 className="category">{book.category}</h5>
+            <h3 className="title">
               {book.title}
-            </h1>
-            <span>
-              {book.author}
-            </span>
+            </h3>
+            <h5>{book.author}</h5>
             <div>
-              <ul>
-                <li>Comments</li>
-                <li>
+              <div className="links">
+                <a href="/#">Comments</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="vl" />
+                <a href="/#">
                   <RemoveBook id={book.id} book={book} />
-                </li>
-                <li>Edit</li>
-              </ul>
+                </a>
+                <span className="vl" />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/#">Edit</a>
+              </div>
             </div>
           </div>
-          <div className="px-3">
-            <div>Animated Circle</div>
-            <div>XX%</div>
-            <h4>Completed</h4>
+          <div className="completion">
+            <div>
+              <div className="Oval-2" />
+            </div>
+            <div>
+              <p className="percent">
+                {progress}
+                %
+              </p>
+              <h5>Completed</h5>
+            </div>
           </div>
-          <div className="px-3">
-            <h3>CURRENT CHAPTER</h3>
-            <p>Chapter 17</p>
-            <button type="button" className="btn btn-primary">Update Progress</button>
+          <div className="line-2" />
+          <div className="progress">
+            <span>CURRENT CHAPTER</span>
+            <p className="Current-Lesson">
+              Chapter
+              {` ${chapter}`}
+            </p>
+            <button className="Update-progress" type="button">Update Progress</button>
           </div>
         </div>
       ))}
-
     </>
-
   );
 };
 

@@ -1,10 +1,10 @@
 # Bookstore
 
 > In this project, I used React and Redux to build a simple single-page application, this app has functions to add and remove books to the Book API, as well as a book list.
-<!-- 
+
 screenshot
 
-![](./screenshot/screenshot.png) -->
+![](./src/images/Screenshot.png)
 
 ## 👷🏻 Built using
     - React js

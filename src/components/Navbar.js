@@ -1,23 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import avatar from '../images/user-svgrepo-com.svg';
 
 const Navbar = () => (
-  <header className="header">
-    <nav className="d-flex m-4 align-items-baseline">
+  <nav className="main-nav">
+    <Link to="/">
+      <h1 className="navbar-brand"> Bookstore</h1>
+    </Link>
+    <div className="nav-item">
       <Link to="/">
-        {' '}
-        <h1 className="mx-4"> Bookstore</h1>
+        <p> BOOKS </p>
       </Link>
-      <Link to="/">
-        {' '}
-        <p className="mx-4"> BOOKS </p>
-      </Link>
+    </div>
+    <div className="nav-item">
       <Link to="/categories">
-        {' '}
-        <p className="mx-4"> CATEGORIES </p>
+        <p> CATEGORIES </p>
       </Link>
-    </nav>
-  </header>
+    </div>
+    <img className="user-avatar" src={avatar} alt="user" />
+  </nav>
 );
 
 export default Navbar;
