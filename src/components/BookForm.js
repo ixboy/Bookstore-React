@@ -26,7 +26,7 @@ const AddBook = () => {
       <span className="Text-Style-10">ADD NEW BOOK</span>
       <form onSubmit={submitBookToStore}>
         <input type="text" id="titleId" value={booktitle} onChange={addTitle} placeholder="Book title" />
-        <select type="select" id="category">
+        <select className="select-b" type="select" id="category">
           <option value="Sci-Fi">Sci-fi</option>
           <option value="Learning">Learning</option>
           <option value="Programming">Programming</option>
