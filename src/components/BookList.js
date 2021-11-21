@@ -1,8 +1,6 @@
-import CircularProgress from '@mui/material/CircularProgress';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getBooks } from '../redux/books/books';
-import './css/BookList.css';
 import RemoveBook from './RemoveBook';
 
 const BookList = () => {
@@ -13,13 +11,13 @@ const BookList = () => {
     dispatch(getBooks());
   }, [dispatch]);
 
-  const progress = Math.round(Math.random() * (100 - 0) + 0);
+  const progress = 75;
   const chapter = Math.round(Math.random() * (20 - 0) + 0);
 
   return (
-    <div className="book-card">
+    <>
       {bookStore.map((book) => (
-        <div key={book.id}>
+        <div key={book.id} className="book-card">
           <div className="content">
             <h5 className="category">{book.category}</h5>
             <h3 className="title">
@@ -29,38 +27,41 @@ const BookList = () => {
             <div>
               <div className="links">
                 <a href="/#">Comments</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
                 <span className="vl" />
                 <a href="/#">
                   <RemoveBook id={book.id} book={book} />
                 </a>
                 <span className="vl" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="/#">Edit</a>
               </div>
             </div>
           </div>
           <div className="completion">
-            <div><CircularProgress color="primary" variant="determinate" value={progress} /></div>
             <div>
-              <p>
+              <div className="Oval-2" />
+            </div>
+            <div>
+              <p className="percent">
                 {progress}
                 %
               </p>
               <h5>Completed</h5>
             </div>
           </div>
+          <div className="line-2" />
           <div className="progress">
-            <h5>CURRENT CHAPTER</h5>
-            <p>
+            <span>CURRENT CHAPTER</span>
+            <p className="Current-Lesson">
               Chapter
               {` ${chapter}`}
             </p>
-            <button type="button">Update Progress</button>
+            <button className="Update-progress" type="button">Update Progress</button>
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 
