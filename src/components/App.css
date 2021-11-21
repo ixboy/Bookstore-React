@@ -228,6 +228,7 @@ li {
   letter-spacing: 0.5px;
   color: #fff;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border: none;
   border-radius: 3px;
   background-color: var(--azure);
 }
@@ -260,6 +261,7 @@ form {
 }
 
 form button {
+  border: none;
   min-width: 8.938rem;
   max-height: 2.813rem;
   margin: 1.188rem 0;
