@@ -11,9 +11,9 @@ screenshot
     - Redux
     - CSS3
   
-<!-- ## 🌐 Live Preview
+## 🌐 Live Preview
 
-> [Bookstore]() -->
+> [Bookstore](https://bookstoreapp-3.netlify.app/)
 
 ## 🚩 Getting Started
 To get this project up and running, follow the steps bellow:
