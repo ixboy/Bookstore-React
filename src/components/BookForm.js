@@ -22,15 +22,17 @@ const AddBook = () => {
   };
 
   return (
-    <div className="mx-auto m-4">
-      <h2>ADD NEW BOOK</h2>
+    <div className="form-div">
+      <span className="Text-Style-10">ADD NEW BOOK</span>
       <form onSubmit={submitBookToStore}>
         <input type="text" id="titleId" value={booktitle} onChange={addTitle} placeholder="Book title" />
-        <select type="select" id="category">
-          <option value="test_1">Learning</option>
-          <option value="test_2">Programing</option>
-          <option value="test_3">Movies</option>
-          <option value="test_4">Novels</option>
+        <select className="select-b" type="select" id="category">
+          <option value="Sci-Fi">Sci-fi</option>
+          <option value="Learning">Learning</option>
+          <option value="Programming">Programming</option>
+          <option value="Drama">Drama</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Action">Action</option>
         </select>
         <button type="submit">Add Book</button>
       </form>
